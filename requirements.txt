@@ -1,0 +1,27 @@
+# Python依赖包列表
+# 用于文件处理工具集
+
+# Word文档处理
+python-docx>=0.8.11
+
+# XML处理
+lxml>=4.9.0
+
+# PDF处理（用于删除空白页）
+PyPDF2>=3.0.0
+
+# Excel处理
+openpyxl>=3.0.7
+
+# GUI界面
+PyQt5>=5.15.0
+
+# 注意：
+# 1. 以上是Python包依赖
+# 2. 还需要系统级依赖：LibreOffice
+#    - CentOS/RHEL: sudo yum install libreoffice-headless
+#    - macOS: brew install --cask libreoffice
+#    - Ubuntu/Debian: sudo apt-get install libreoffice
+# 3. RAR文件解压需要安装unar
+#    - macOS: brew install unar
+#    - Ubuntu/Debian: sudo apt-get install unar
