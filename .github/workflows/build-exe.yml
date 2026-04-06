@@ -1,4 +1,4 @@
-name: Build Windows EXE
+name: Build 天津录音GUI Windows EXE
 
 on:
   push:
@@ -22,16 +22,15 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pyinstaller Pillow
-        if (Test-Path requirements.txt) { pip install -r requirements.txt }
+        pip install pyinstaller PyQt5 openpyxl
 
     - name: Build with PyInstaller
       run: |
-        pyinstaller --noconsole --onefile --paths . compress_images_gui.py
+        pyinstaller --noconsole --onefile --name "天津录音工具" "天津录音GUI.py"
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
-        name: compress-images-tool-win64
-        path: dist/compress_images_gui.exe
+        name: tianjin-recording-tool-win64
+        path: "dist/天津录音工具.exe"
         if-no-files-found: error
